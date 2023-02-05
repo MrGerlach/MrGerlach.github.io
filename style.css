@@ -1,25 +1,31 @@
 body {
-    background: #32681cb4;
+    background: #1c682fb4;
     color: #022444;
     padding: 25px;
     font-family: 'American Typewriter';
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
-h2 {
+h1 {
     font-size: 3rem;
-
+}
+h2 {
+    font-size: 2rem;
 }
 
-img {
+.profile-image {
     width: 320px;
     margin-inline-end: 4rem;
 }
+.article-image {
 
-section {
+}
+.bio {
     display: flex;
 }
 
-a {
+a.button {
     text-decoration: none;
     color:whitesmoke;
     background: rgb(1, 1, 149);
@@ -30,4 +36,19 @@ a {
     border-radius: 1.25rem;
 
 
+}
+article {
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .bio {
+        flex-direction: column;
+    }
+    article {
+        flex-direction: column;
+    }
+    .article-image {
+        width: 100%;
+    }
 }
