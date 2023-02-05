@@ -1,7 +1,33 @@
 body {
-    background: #6a8e23b4;
+    background: #32681cb4;
     color: #022444;
     padding: 25px;
     font-family: 'American Typewriter';
+}
+
+h2 {
+    font-size: 3rem;
+
+}
+
+img {
+    width: 320px;
+    margin-inline-end: 4rem;
+}
+
+section {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color:whitesmoke;
+    background: rgb(1, 1, 149);
+    padding: 0 1rem;
+    height: 2.5 rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1.25rem;
+
 
 }
