@@ -17,9 +17,12 @@ h2 {
 .profile-image {
     width: 320px;
     margin-inline-end: 4rem;
+    border-radius: 5rem;
 }
 .article-image {
-
+    width: 200px;
+    border-radius: 1.25rem;
+    margin-inline-start: 4rem;
 }
 .bio {
     display: flex;
@@ -51,4 +54,9 @@ article {
     .article-image {
         width: 100%;
     }
+}
+
+/* separator bars */ 
+section nav {
+  border-block-end: 1px solid var(--primary);
 }
