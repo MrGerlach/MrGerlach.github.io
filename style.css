@@ -1,5 +1,5 @@
 body {
-    background: #1c682fb4;
+    background: #ccd9d0b4;
     color: #022444;
     padding: 25px;
     font-family: 'American Typewriter';
@@ -13,21 +13,51 @@ h1 {
 h2 {
     font-size: 2rem;
 }
-
+section {
+  border-block-end: 1px solid;
+  padding: 15px;
+}
+header {
+    border-radius: 1.25rem;
+    background: #1c682fb4;
+}
+header nav {
+    margin-inline-start: 2rem;
+    margin-inline-end: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  header nav li {
+    display: inline;
+    margin-inline-start: 1rem;
+    font-weight: 700;
+  }
+  
+  header nav li a {
+    text-decoration: none;
+    color: #022444;
+  }
 .profile-image {
     width: 320px;
     margin-inline-end: 4rem;
     border-radius: 5rem;
 }
-.article-image {
-    width: 200px;
-    border-radius: 1.25rem;
-    margin-inline-start: 4rem;
-}
+
 .bio {
     display: flex;
+    font-display: justify;
 }
-
+.recent-work {
+    padding-block-end: 3rem;
+}
 a.button {
     text-decoration: none;
     color:whitesmoke;
@@ -42,6 +72,16 @@ a.button {
 }
 article {
     display: flex;
+    padding: 2rem 0;
+    align-items: center;
+}
+article strong {
+    font-style:italic;
+}
+article .article-image {
+    width: 200px;
+    border-radius: 1.25rem;
+    margin-inline-start: 4rem;
 }
 
 @media (max-width: 1024px) {
@@ -56,7 +96,46 @@ article {
     }
 }
 
-/* separator bars */ 
-section nav {
-  border-block-end: 1px solid var(--primary);
-}
+footer {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  footer ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin: 0 8%;
+  }
+  
+  footer a {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--primary);
+    text-decoration: none;
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    align-items: center;
+  }
+  
+  footer .copywright {
+    margin: 3rem 0;
+  }
+  
+  footer .link-icon {
+    margin-block-start: 0.5rem;
+    background: var(--link);
+    color: var(--background);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
