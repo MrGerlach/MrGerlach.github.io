@@ -1,5 +1,5 @@
 body {
-    background: #ccd9d0b4;
+    background: #fefefa;
     color: #022444;
     padding: 25px;
     font-family: 'American Typewriter';
@@ -18,8 +18,8 @@ section {
   padding: 15px;
 }
 header {
-    border-radius: 1.25rem;
-    background: #1c682fb4;
+    border-radius: 1rem;
+    background: #c4e2ca;
 }
 header nav {
     margin-inline-start: 2rem;
@@ -50,38 +50,84 @@ header nav {
     margin-inline-end: 4rem;
     border-radius: 5rem;
 }
+.contact-image {
+    width: 320px;
+    height: 320px;
+    margin-inline-end: 4rem;
+    border-radius: 5rem;
+}
 
+.buttonimage {
+    width: 2.25rem;
+    margin-inline-start: 1rem;
+}
 .bio {
     display: flex;
     font-display: justify;
 }
 .recent-work {
     padding-block-end: 3rem;
+    align-items: center;
 }
 a.button {
     text-decoration: none;
     color:whitesmoke;
-    background: rgb(1, 1, 149);
+    background: #587d9f;
     padding: 0 1rem;
     height: 2.5 rem;
     display: inline-flex;
     align-items: center;
     border-radius: 1.25rem;
+}
+
+a.button-resume {
+    text-decoration: none;
+    color:whitesmoke;
+    background: #587d9f;
+    padding: 0 1rem;
+    height: 2.5 rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1.25rem;
+    margin-inline-start: 1rem;
+}
 
 
+button.button {
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: 1rem;
+    background: #587d9f;
+    padding: 0 1rem;
+    height: 2.5 rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1.25rem;
+}
+.resume-buttons {
+    display: inline-flex;
+    padding: 1rem;
+    align-items: center;
 }
 article {
     display: flex;
     padding: 2rem 0;
     align-items: center;
 }
+
 article strong {
     font-style:italic;
 }
+
+article li {
+    margin-block-end: 0.5rem;
+}
+
 article .article-image {
     width: 200px;
     border-radius: 1.25rem;
     margin-inline-start: 4rem;
+    margin-block-start: 2rem;
 }
 
 @media (max-width: 1024px) {
@@ -114,9 +160,10 @@ footer {
   }
   
   footer a {
+    text-decoration: none;
+    color: #022444;
     display: inline-flex;
-    flex-direction: column;
-    color: var(--primary);
+    flex-direction: columns;
     text-decoration: none;
     font-family: "Sora", sans-serif;
     font-weight: 700;
@@ -126,16 +173,133 @@ footer {
   footer .copywright {
     margin: 3rem 0;
   }
+
+/* ------------- Timeline ---------------- */
+  {
+    box-sizing: border-box;
+  }
   
-  footer .link-icon {
-    margin-block-start: 0.5rem;
-    background: var(--link);
-    color: var(--background);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #587d9f;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #c4e2ca;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #c4e2ca;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #c4e2ca;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #c4e2ca transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: #c4e2ca;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries  */
+  @media screen and (max-width: 1024px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
   }

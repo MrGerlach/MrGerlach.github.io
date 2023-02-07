@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Personal site</title>
+    <meta name = "viewport" content ="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h2>Gerlach Michał</h2>
+                <ul>
+                  <li><a href = "index.html">Home</a></li>
+                  <li><a href = "history.html">History</a></li>
+                  <li><a href = "https://www.codecademy.com/profiles/MrGerlach" target = '_blank'>Certificates</a></li>
+                  <li><a href = "resume.html">Resume</a></li>
+                  <li><a href = "contactme.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class = "bio">
+        <img class="profile-image" src="Resources/cv.png">
+        <div>
+            <h1>Resume</h1>
+            <p><b>Hi! I'm glad you get here!</b></p>
+        <p align = "justify"> I hope that you are aware that my resume contains some of my personal information, so please use them only to contact me. 
+          Below there is the link to my resume. </p>
+          <p align = "justify">Know that I'll be more than happy if you contact me with the button below.</p>
+          <div class ="resume-buttons">
+              <form action="mailto:micgerlach.contact@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+                  name="EmailForm">
+                  <button class = "button" type="submit" value="Submit">
+                    <div> Send me a message </div>
+                     <img  class="buttonimage" src="Resources/mail50.png">
+                  </button>
+              </form>  
+              <div>
+              <a class = "button-resume" href="Resources/M_Gerlach_Resume.pdf" download>Download the resume
+                <img class = "buttonimage" src="Resources/download50.png" alt="Download resume">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+        <footer>
+          <ul>
+            <li>
+              <a href="https://pl.linkedin.com/in/gerlach-m">
+                  LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="resume.html">
+                  CV
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/MrGerlach">
+                GitHub
+              </a>
+            </li>
+          </ul>
+          <p class="copywright">© 2023 Gerlach Michał</p>
+        </footer>
+    </body>
+</html>
