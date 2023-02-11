@@ -37,6 +37,7 @@ header nav {
   
   header nav li {
     display: flex;
+    align-items: center;
     margin-inline-start: 1rem;
     font-weight: 700;
   }
