@@ -318,10 +318,11 @@ footer {
     grid-row-gap: 25px;
     align-items: center;
   }
-  
+  /*
   .wrapper > div img {
     max-width: 100%;
   }
+  */
 
   .gridded {
     width: 320px;
