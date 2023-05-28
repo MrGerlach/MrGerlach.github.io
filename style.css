@@ -50,6 +50,7 @@ header nav {
   }
 .profile-image {
     width: 320px;
+    height: 460px;
     margin-inline-end: 4rem;
     border-radius: 5rem;
 }
